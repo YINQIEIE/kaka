@@ -1,0 +1,33 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.3.3'
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+        classpath 'com.antfortune.freeline:gradle:0.8.7'
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+ext {
+    compileSdkVersion = 25
+    buildToolsVersion = '26.0.0'
+    targetSdkVersion = 25
+    minSdkVersion = 15
+    supprot_v4 = 'com.android.support:appcompat-v4:25.3.1'
+    supprot_v7 = 'com.android.support:appcompat-v7:25.3.1'
+    support_design = 'com.android.support:design:25.3.1'
+}
